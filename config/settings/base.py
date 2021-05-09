@@ -53,6 +53,10 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
   'cassie.users.apps.UsersAppConfig',
+  'cassie.licenses.apps.LicensesAppConfig',
+  'cassie.accounts.apps.AccountsAppConfig',
+  'cassie.reports.apps.ReportsAppConfig',
+  'cassie.trades.apps.TradesAppConfig'
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

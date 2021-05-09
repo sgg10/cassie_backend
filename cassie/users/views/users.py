@@ -21,6 +21,7 @@ from cassie.users.serializers import (
 
 # Models
 from cassie.users.models import User
+from cassie.licenses.models import License
 
 class UserLoginView(TokenObtainPairView):
   """User login view."""
