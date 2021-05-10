@@ -10,4 +10,7 @@ urlpatterns = [
 
     # Apps
     path('', include(('cassie.users.urls', 'users'), namespace='users')),
+    path('', include(('cassie.licenses.urls', 'licenses'), namespace='licenses')),
+    path('', include(('cassie.accounts.urls', 'accounts'), namespace='accounts')),
+    path('', include(('cassie.reports.urls', 'reports'), namespace='reports')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
