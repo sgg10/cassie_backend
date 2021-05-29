@@ -11,9 +11,21 @@ from rest_framework_simplejwt.views import TokenRefreshView
 
 # Views
 from .views import users as user_views
+from .views import licenses as user_licenses_views
+from .views import accounts as user_accounts_views
 
 router = DefaultRouter()
 router.register(r'users', user_views.UserViewSet, basename='users')
+router.register(
+  r'users/(?P<username>[-a-zA-Z0-9_-]+)/licenses',
+  user_licenses_views.UserLicensesViewSet,
+  basename='users_licenses'
+)
+router.register(
+  r'users/(?P<username>[-a-zA-Z0-9_-]+)/accounts',
+  user_accounts_views.UserAccountViewSet,
+  basename='users_accounts'
+)
 
 urlpatterns = [
   path('users/login/', user_views.UserLoginView.as_view(), name='login'),
